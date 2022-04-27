@@ -20,8 +20,8 @@ class Client:
         
     def Sheet(self):
 
-        for items in Client.content:
-            for 
+        for 
+            for items in Client.content:
                 bookSheet.write(Client.row, Client.coloumn+1,self.cnme)
 
         
