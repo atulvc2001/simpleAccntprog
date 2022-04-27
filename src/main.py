@@ -1,27 +1,37 @@
 import xlsxwriter
 
-class theBook:
+class Client:
 
-    content = ["Client name","Advance","Balance","Total"]
+    row = 0
+    coloumn = 0
 
-    def Accnt(self,clnm):
-        bookName = xlsxwriter.Workbook('AccountingsRam.xlsx')
-        bookSheet = bookName.add_worksheet()
+    def __init__(self, clientname, date, advance,balance,total):
 
-        row = 0
-        coloumn = 0
+        self.cnme = clientname
+        self.date = date
+        self.adv = advance
+        self.tot = total
+
+        content = ["Client name", "date", "Advance", "Balance", "Total"]
 
         for item in content:
+            bookSheet.write(Client.row,Client.coloumn,content)
+            Client.row += 1
+        
+    def Sheet(self):
 
-            bookSheet.write(row,coloumn,item)
-            row += 1
+        for items in Client.content:
+            for 
+                bookSheet.write(Client.row, Client.coloumn+1,self.cnme)
 
-    def clientname(clntname)
+        
 
 if __name__ == "__main__":
     
-    theBook.run()
+    Client.run()
+   
     bookName = xlsxwriter.Workbook('AccountingsRam.xlsx')
     bookSheet = bookName.add_worksheet()
    
     clntname = str(input("Please Enter your Client's name"))
+"
