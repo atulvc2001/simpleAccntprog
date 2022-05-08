@@ -29,7 +29,8 @@ class Client:
 if __name__ == "__main__":
     
     Client.run()
-   
+  
+
     bookName = xlsxwriter.Workbook('AccountingsRam.xlsx')
     bookSheet = bookName.add_worksheet()
    
