@@ -6,9 +6,9 @@ class Client:
     row = 0
     coloumn = 0
 
-    def __init__(self, clientname, date, advance, balance, total):
+    def __init__(self, *args, **kwargs):
 
-        self.cnme = clientname
+        self.cnme = clntname
         self.date = date
         self.adv = advance
         self.tot = total
@@ -32,6 +32,8 @@ class Client:
         for items in Client.details:
             bookSheet.write(Client.row, Client.coloumn, Client.details)
             Client.row += 1
+
+        bookSheet.close()
 
 
 if __name__ == "__main__":
