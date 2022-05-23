@@ -1,38 +1,49 @@
 import xlsxwriter
 
+
 class Client:
 
     row = 0
     coloumn = 0
 
-    def __init__(self, clientname, date, advance,balance,total):
+    def __init__(self, clientname, date, advance, balance, total):
 
         self.cnme = clientname
         self.date = date
         self.adv = advance
         self.tot = total
+        self.bal = balance
+
+        details = [self.cnme, self.date, self.adv, self.tot, self.bal]
 
         content = ["Client name", "date", "Advance", "Balance", "Total"]
 
         for item in content:
-            bookSheet.write(Client.row,Client.coloumn,content)
-            Client.row += 1
-        
+            bookSheet.write(Client.row, Client.coloumn, content)
+            row += 1
+
     def Sheet(self):
 
-        for 
-            for items in Client.content:
-                bookSheet.write(Client.row, Client.coloumn+1,self.cnme)
+        Client.row = 0
+        Client.coloumn += 1
 
-        
+        self.tot = self.adv + self.bal
+
+        for items in Client.details:
+            bookSheet.write(Client.row, Client.coloumn, Client.details)
+            Client.row += 1
+
 
 if __name__ == "__main__":
-    
-    Client.run()
-  
 
-    bookName = xlsxwriter.Workbook('AccountingsRam.xlsx')
+    bookName = xlsxwriter.Workbook("AccountingsRam.xlsx")
     bookSheet = bookName.add_worksheet()
-   
-    clntname = str(input("Please Enter your Client's name"))
-"
+
+    clntname = str(input("Please Enter your Client's name\n"))
+    date = str(input("Please Enter the date: \n"))
+    advance = str(input("Enter the advance amount given by the Client\n"))
+    balance = str(input("Enter the balance amount give by the Client\n"))
+
+    total = advance + balance
+
+    exec = Client(clntname, date, advance, balance, total)
