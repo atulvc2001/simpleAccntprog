@@ -1,2 +1,2 @@
 # simpleAccntprog
-A simple programming for reading and writing my dad's finances onto an excel sheet.
+A simple programming for reading, writing and calculating my dad's finances into an excel sheet.
